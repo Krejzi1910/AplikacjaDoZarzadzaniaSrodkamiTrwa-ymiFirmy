@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja Do Zarządzania Środkami Trwałymi</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #f8f9fa; 
+            color: #333; 
+            transition: background-color 0.3s;
+        }
+        h1 { 
+            text-align: center; 
+            font-size: 2.5em; 
+            margin-bottom: 20px; 
+            color: #2c3e50;
+        }
+        .container { 
+            margin-bottom: 20px; 
+            padding: 20px; 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.2s; 
+        }
+        .container:hover {
+            transform: translateY(-5px); 
+        }
+        .button-container {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        @media (min-width: 600px) {
+            .button-container {
+                flex-direction: row; 
+            }
+        }
+        .button { 
+            background-color: #28a745; 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin: 5px; 
+            font-size: 16px; 
+            flex: 1; 
+            min-width: 150px; 
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover { 
+            background-color: #19ce40; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+        }
+        .input-field { 
+            margin-bottom: 20px; 
+            padding: 12px; 
+            width: calc(100% - 24px); 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            transition: border-color 0.3s, box-shadow 0.3s; 
+        }
+        .input-field:focus { 
+            border-color: #28a745; 
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); 
+            outline: none; 
+        }
+        .form-title { 
+            font-weight: bold; 
+            margin-bottom: 15px; 
+            font-size: 1.5em; 
+        }
+        #message { 
+            margin-top: 10px; 
+            font-size: 1.2em; 
+            text-align: center; 
+            color: #333; 
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+        }
+        li { 
+            background: #f8f9fa; 
+            border: 1px solid #ddd;
+            margin: 5px 0; 
+            padding: 12px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
+        li:hover { 
+            background: #e2e6ea; 
+            transform: translateY(-2px); 
+        }
+        .icon-button {
+            width: 32px; 
+            height: 32px; 
+            margin-left: 10px; 
+            cursor: pointer; 
+            vertical-align: middle; 
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out; 
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .form-title {
+                font-size: 1.2em;
+            }
+            .button {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="button-container">
+            <button class="button" id="show-form">Dodaj Środek Trwały</button>
+            <button class="button" id="show-list">Lista Środków Trwałych</button>
+        </div>
+    </div>
+
+    <div id="form-container" class="container hidden fade-in">
+        <h2 class="form-title" id="form-title">Dodaj Nowy Środek Trwały</h2>
+        <form id="add-asset-form">
+            <input class="input-field" type="text" id="name" placeholder="Nazwa" required>
+            <input class="input-field" type="text" id="location" placeholder="Lokalizacja" required>
+            <input class="input-field" type="text" id="place" placeholder="Miejsce" required>
+            <input class="input-field" type="text" id="responsible-person" placeholder="Osoba odpowiedzialna" required>
+            <button type="submit" class="button" id="submit-button">Dodaj środek trwały</button>
+        </form>
+    </div>
+
+    <div id="list-container" class="container hidden fade-in">
+        <h2>Lista Środków Trwałych</h2>
+        <input class="input-field" type="text" id="search-input" placeholder="Wyszukaj środek trwały" />
+        <ul id="assets-list"></ul>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
