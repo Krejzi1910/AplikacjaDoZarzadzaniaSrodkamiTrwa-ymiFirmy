@@ -1,7 +1,8 @@
 # Intefejs Dodawania Środku Trwałego
 ### Po Dodaniu wyskakuje komunikat użytkownik został dodany,
 ### dodaje się do bazy danych jak i do listy środków trwałych po dodaniu baza danych nadaje środkowi trwałemu numer ID
-![Zrzut ekranu 2024-10-30 ff](https://github.com/user-attachments/assets/02e89f62-ca64-4012-acff-53ba5b7f9344)
+![Zrzut ekranu 2024-10-30 114429fff](https://github.com/user-attachments/assets/0ae73090-3d5b-4252-b247-bee256685331)
+
 
 
 
