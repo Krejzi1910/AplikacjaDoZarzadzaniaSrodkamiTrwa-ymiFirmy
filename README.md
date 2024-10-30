@@ -6,10 +6,13 @@
 # Lista Środków Trwałych
 ### Po dodaniu użytkownika, właśnie tu znajduje się jego numer ID, Nazwa, Lokalizacja, Miejsce, Osoba Odpowiedzialna. W tej sekcji można wyszukiwać użytkowników po numerze ID, Lokalizacji, Miejscu itd. Również można usuwać użytkownika za pomocą ikony.
 ![obraz_2024-10-30_112333398](https://github.com/user-attachments/assets/3b5799b8-2dbc-4468-95c7-21ad20612312)
+![baza1](https://github.com/user-attachments/assets/c7db0637-9b6a-4614-9c67-be03c89dec5e)
+
 
 # Działanie Formularza Aktualizacji
 ### Po naciśnięciu ikony aktualizacji, użytkownik jest przenoszony do formularza Aktualizacji. Pojawiają się dane, które zostały wprowadzone. Po zmianie należy wcisnąć przycisk Aktualizuj, a zmiany zachodzą od razu w bazie danych, jak i w aplikacji.
 ![aktu](https://github.com/user-attachments/assets/e5affb0f-6716-447a-931e-18aa9d41f305)
+![baza2](https://github.com/user-attachments/assets/dce70e49-c8ec-4e7c-bb1f-b35fa0a03aa2)
 
 
 
